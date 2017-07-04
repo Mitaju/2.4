@@ -18,7 +18,7 @@ def create_files_list(list1, list2):
 
 
 def find_str(list_in, search):
-    print('Количество файлов, которые проверяются при поисковом запросе: ', len(list_in))
+    print('Всего: ', len(list_in))
     found = []
     for file_name in list_in:
         with open(file_name, encoding='utf-8', errors='ignore') as f:
@@ -44,7 +44,7 @@ while True:
     if i == 1:
         files_list = create_files_list(files1, files2)
 
-    search_line = input('\nНачинаем поиск. \nВведите условия поиска: ')
+    search_line = input('\nНачинаем поиск. \nВведите строку: ')
 
     files_with_str = find_str(files_list, search_line)
 
